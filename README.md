@@ -1,1 +1,1 @@
-This is repo is complete a clone of the offical hyperledger aries cloud agent repo.
+This is repo is a clone of the offical hyperledger aries cloud agent repo.
