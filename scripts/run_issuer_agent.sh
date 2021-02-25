@@ -1,5 +1,12 @@
 #!/bin/bash
 
+#this file assumes a von dev network and an issuer agent will run in the same vm.
+#$1 is the vm's ip.
+#$2 is the tails file server's ngrok https url
+
+echo "vm's ip is: $1"
+echo "tails file server's ngrok https url is: $2"
+
 PORTS="8000:8000 8001:8001" \
 ./run_docker start \
 -l Issuer \
@@ -18,4 +25,5 @@ PORTS="8000:8000 8001:8001" \
 --auto-accept-invites \
 --auto-accept-requests \
 --auto-respond-messages \
---auto-ping-connection
+--auto-ping-connection \
+--tails-server-base-url $2
